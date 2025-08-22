@@ -1,7 +1,11 @@
 import React from 'react';
 
-export default function Login() {
+export default function Login({ test }: { test?: string }) {
     return (
-        <h1>Hello World</h1>
+        <div className="flex items-center justify-center h-screen">
+            <h1 className="text-4xl font-bold text-blue-600">
+                {test ?? "Login Page"}
+            </h1>
+        </div>
     );
 }
