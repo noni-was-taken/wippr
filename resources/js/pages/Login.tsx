@@ -35,9 +35,22 @@ export default function Login({ test }: { test?: string }) {
                     </div>
                     <div className='w-full h-1/10 mt-3 flex items-center justify-center border-t'>
                         <input type="button" value="Sign Up" 
-                               className='bg-amber-600 h-3/4 w-full rounded-xl text-white font-serif font-bold text-xl hover:text-black hover:bg-amber-800 transition-all cursor-pointer'/>
+                               className='bg-amber-600 h-3/4 w-full rounded-lg text-white font-serif font-bold text-lg hover:text-black hover:bg-amber-800 transition-all cursor-pointer'/>
                     </div>
                 </div>
+            </div>
+            <div className='bg-amber-600 h-full w-1/3 flex flex-col items-center justify-center'>
+                <h1 className='text-3xl font-bold text-center text-white font-serif'>
+                    Already Have An Account?
+                </h1>
+                <div className='w-full flex justify-center'>
+                    <input 
+                    type="button" 
+                    value="Log In" 
+                    className='mt-3 h-13 w-1/3 flex bg-white shadow-xl rounded-xl text-lg
+                                hover:bg-amber-600 hover:text-white hover:font-bold hover:border-white hover:border-3'
+                    />
+                </div>     
             </div>  
         </div>
     );
