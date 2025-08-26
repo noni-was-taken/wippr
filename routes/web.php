@@ -8,10 +8,8 @@ Route::get('/login', function () {
     ]);
 });
 
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
-
-Route::get('/blade-test', function () {
-    return view('blade-test');
+Route::get('/home', function () {
+    return Inertia::render('Landing', [
+        'test' => 'Hello from Laravel!'
+    ]);
 });
