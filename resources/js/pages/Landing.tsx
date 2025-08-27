@@ -1,5 +1,7 @@
 import React from 'react';
 import NavBar from '../components/Utilities/NavBar';
+import {BookDown, MonitorDown, ImageDown} from 'lucide-react';
+
 
 export default function Landing() {
     return (
@@ -44,8 +46,39 @@ export default function Landing() {
                     <h1 className='text-8xl text-white -translate-y-5'>Welcome to Wippr.</h1>
                 </div>
             </div>
-            <div className='h-11/16  w-full flex flex-col'>
-
+            <div className='h-1/4 mt-20 w-full flex flex-col justify-center items-center'>
+                <div className='h-full w-3/5 flex flex-col item-center border-blue-400 border-2 p-3'>
+                    <h1 className='text-center text-5xl font-extrabold'>What Is Wippr?</h1>
+                    <div className='w-full h-3/4 flex mt-auto items-center justify-evenly'>
+                        <div className='h-full w-1/4 py-3 flex  flex-col items-center'>
+                            <BookDown className='h-1/4 w-auto'/>
+                            <h1 className='mt-4 font-serif font-bold text-3xl'>
+                                Interact
+                            </h1>
+                            <p className='mt-2 text-xl text-center'>
+                                Engage with a community of like-minded individuals passionate about knowledge sharing and intellectual growth.
+                            </p>
+                        </div>
+                        <div className='h-full w-1/4 py-3 flex flex-col items-center'>
+                            <MonitorDown className='h-1/4 w-auto'/>
+                            <h1 className='mt-4 font-serif font-bold text-3xl'>
+                                Debate
+                            </h1>
+                            <p className='mt-2 text-xl text-center'>
+                                Participate in thought-provoking discussions and debates on a wide range of topics, from science and technology to philosophy and culture.
+                            </p>
+                        </div>
+                        <div className='h-full w-1/4 py-3 flex flex-col items-center'>
+                            <ImageDown className='h-1/4 w-auto'/>
+                            <h1 className='mt-4 font-serif font-bold text-3xl'>
+                                Learn
+                            </h1>
+                            <p className='mt-2 text-xl text-center'>
+                                Access a wealth of resources, articles, and multimedia content to expand your knowledge and stay informed about the latest developments in various fields.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
