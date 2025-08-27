@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 import SignUpForm from "../components/Forms/SignUp";
 import LoginForm from "../components/Forms/Login";
-
+import { Head } from '@inertiajs/react';
 
 export default function Login() {
     const [signUp, setLogin] = useState(false);
     
         return(
+            <>
+            <Head title="Login"/>
             <div className="bg-black h-screen w-screen flex items-center ">
                 <div className={ `bg-white h-full flex flex-col items-center justify-center transition-all duration-300
                                 ${signUp ? 'w-2/3' : 'w-1/3'}`}>
@@ -50,5 +52,6 @@ export default function Login() {
                     </div>
                 </div>
             </div>
+        </>
         );
     }

@@ -8,7 +8,7 @@ Route::get('/login', function () {
     ]);
 });
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return Inertia::render('Landing', [
         'test' => 'Hello from Laravel!'
     ]);

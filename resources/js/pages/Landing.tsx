@@ -1,10 +1,12 @@
 import React from 'react';
-import NavBar from '../components/Utilities/NavBar';
 import {BookDown, MonitorDown, ImageDown} from 'lucide-react';
-
+import AboutUs from '../components/LandingPage/about-us';
+import { Head } from '@inertiajs/react';
+import TitleEffect from '../components/LandingPage/TitleEffect';
 
 export default function Landing() {
     return (
+        <>
         <div className="bg-white h-[200vh] w-screen flex flex-col">
             <div className= 'z-0 h-1/4 shadow-inner relative bg-center w-full flex flex-col bg-[url("/images/wippr-backdrop.jpg")] bg-cover'>
                 <div className='absolute inset-0 bg-black opacity-60'></div>
@@ -43,43 +45,21 @@ export default function Landing() {
                     </svg>
                 </div>
                 <div className='z-10 mt-auto font-extrabold font-serif h-2/5 w-full px-30 flex items-center'>
-                    <h1 className='text-8xl text-white -translate-y-5'>Welcome to Wippr.</h1>
+                    {/* <h1 className='text-8xl text-white -translate-y-5'>Welcome to Wippr.</h1> */}
+                    {/* Title effect is heavly AI'd, looks cool tho */}
+                    <TitleEffect />
                 </div>
             </div>
-            <div className='h-1/4 mt-20 w-full flex flex-col justify-center items-center'>
-                <div className='h-full w-3/5 flex flex-col item-center border-blue-400 border-2 p-3'>
-                    <h1 className='text-center text-5xl font-extrabold'>What Is Wippr?</h1>
-                    <div className='w-full h-3/4 flex mt-auto items-center justify-evenly'>
-                        <div className='h-full w-1/4 py-3 flex  flex-col items-center'>
-                            <BookDown className='h-1/4 w-auto'/>
-                            <h1 className='mt-4 font-serif font-bold text-3xl'>
-                                Interact
-                            </h1>
-                            <p className='mt-2 text-xl text-center'>
-                                Engage with a community of like-minded individuals passionate about knowledge sharing and intellectual growth.
-                            </p>
-                        </div>
-                        <div className='h-full w-1/4 py-3 flex flex-col items-center'>
-                            <MonitorDown className='h-1/4 w-auto'/>
-                            <h1 className='mt-4 font-serif font-bold text-3xl'>
-                                Debate
-                            </h1>
-                            <p className='mt-2 text-xl text-center'>
-                                Participate in thought-provoking discussions and debates on a wide range of topics, from science and technology to philosophy and culture.
-                            </p>
-                        </div>
-                        <div className='h-full w-1/4 py-3 flex flex-col items-center'>
-                            <ImageDown className='h-1/4 w-auto'/>
-                            <h1 className='mt-4 font-serif font-bold text-3xl'>
-                                Learn
-                            </h1>
-                            <p className='mt-2 text-xl text-center'>
-                                Access a wealth of resources, articles, and multimedia content to expand your knowledge and stay informed about the latest developments in various fields.
-                            </p>
-                        </div>
-                    </div>
+            <div className='h-1/4 w-full flex flex-col items-center'>
+                <AboutUs />
+                <div className='absolute object-bottom left-0 flex w-full translate-y-74'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e17100" fill-opacity="1" d="M0,192L60,181.3C120,171,240,149,360,160C480,171,600,213,720,208C840,203,960,149,1080,128C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
                 </div>
+            </div>
+            <div className='mt-30 h-2/5 w-full bg-amber-600 flex flex-col'>
+
             </div>
         </div>
+        </>
     );
 }   
